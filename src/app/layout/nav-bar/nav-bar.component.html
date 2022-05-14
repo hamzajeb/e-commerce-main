@@ -1,0 +1,97 @@
+<header>
+
+    <div class="header-top" >
+        <div class="container">
+            <div class="header-alert-news">
+
+                <b>Viver Une nouvelle expérience avec vos achats sur notre site-web</b>
+
+            </div>
+
+            <div class="header-demi-top">
+                <div class="container">
+                    <a href="#" class="header-logo">
+                        <img src=".\assets\images\design\logo.png" class="logo" alt="logo" width="150">
+                    </a>
+                    <div class="header-recherche">
+                        <mat-form-field style="width:400px"> 
+                            
+                            <input matInput placeholder="Rechercher" >
+
+                        </mat-form-field>
+                        <button mat-flat-button color="basic" id="recherche-btn">
+                            <mat-icon>search</mat-icon>
+                        </button>
+                    </div>
+                    <div class="header-actions">
+                        <a routerLink="login" class="action" *ngIf="testconnexion()==false">
+                            <mat-icon class="black-icon" id="personne">person_outline</mat-icon>
+                        </a>
+                        <a class="action" *ngIf="testconnexion()==true" [matMenuTriggerFor]="menu" style="font-size:30px;font-family: 'Oleo Script Swash Caps', cursive ;">
+                            {{prenom}}
+                        </a>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item routerLink="profil" >
+                                <mat-icon>person_outline</mat-icon>
+                                Votre Profile
+                            </button>
+                            <button mat-menu-item (click)="Logout()" >
+                                <mat-icon>exit_to_app</mat-icon>
+                                Deconnexion
+                            </button>
+                        </mat-menu>
+                        <!-- <a routerLink="login" class="action" *ngIf="testconnexion()==true">
+                            <a class="nav-link active" *ngIf="testconnexion()==true" (click)="Logout()" aria-current="page" routerLink="public">Logout</a>
+                            <mat-icon class="black-icon" id="personne">person_outline</mat-icon>
+                        </a> -->
+
+                        <a routerLink="test" class="action">
+                            <mat-icon class="black-icon" matBadge="0" matBadgeColor="warn">mail_outline</mat-icon>
+                            
+                        </a>
+
+                        <a href="#" class="action" >
+                            <mat-icon class="black-icon" matBadge="0" matBadgeColor="warn">favorite_border</mat-icon>
+                            
+                        </a>
+
+                        <a href="#" class="action">
+                            <mat-icon class="black-icon" matBadge="0" matBadgeColor="warn">shopping_cart</mat-icon>
+                           
+                        </a>
+                    </div>
+
+                    <nav class="nav-bar"></nav>
+                    <ul class="liste-categories">
+                        <li class="categorie">
+                            <a href="#" class="categorie-titre">Accueil</a>
+                        </li>
+                        <li class="categorie">
+                            <a href="#" class="categorie-titre">Homme</a>
+                        </li>
+                        <li class="categorie">
+                            <a href="#" class="categorie-titre">Femme</a>
+                        </li>
+
+                        <li class="categorie">
+                            <a href="#" class="categorie-titre">Enfant</a>
+                        </li>
+
+                        <li class="categorie">
+                            <a href="#" class="categorie-titre">Bébé</a>
+                        </li>
+
+                        <li class="categorie">
+                            <a href="#" class="categorie-titre">Promo</a>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
